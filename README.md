@@ -7,6 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Documentation
+
+The following are the details of this module: 
+
+- Created migration including Users, Emails (master table), Email Type (i.e: to, cc, and bcc), Email Recipients and Email Details (communication)
+- User Module to handle to authetications and sessions
+- Email Module to handle the Email Management
+- Web Resources Routes
+- Web Views
+- Models to handle relation between table and business logic
+- User Requests and Email Requests to validate the incoming requests
+
+
 ## Setup Project
 
 - php artisan migrate
