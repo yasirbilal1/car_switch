@@ -32,5 +32,12 @@ class EmailRequest extends FormRequest
                 'email_content'   => 'required',
             ];
         }
+        if($request->getPathInfo() == '/get_email_by_id') 
+        {
+            return [
+                'email_id'        => 'required'
+            ];
+        }
+        
     }
 }

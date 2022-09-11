@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\EmailRequest;
-use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Emails;
 use App\Models\EmailDetails;
+use Illuminate\Http\Request;
 use App\Models\EmailRecipients;
-
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\EmailRequest;
 
 class EmailManagement extends Controller
 {
@@ -153,7 +152,7 @@ class EmailManagement extends Controller
         // return EmailRecipients::where('user_email', Auth::user()->email)->with('email_details')->get();
 
     }
-    public function getEmailById(Request $request)
+    public function getEmailById(EmailRequest $request)
     {
         $request = $request->all();
         $getResponse = Emails::where('id', $request['email_id'])->with('email_sender', 'replies.recipient')->first();
